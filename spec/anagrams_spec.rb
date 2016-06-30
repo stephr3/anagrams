@@ -14,7 +14,3 @@ describe('String#is_anagram?') do
     expect('cat'.is_anagram?("act")).to(eq(true))
   end
 end
-
-# arr.each_with_index() do |letter, i|
-#   letter.concat(arr[i])
-# end
