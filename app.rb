@@ -8,12 +8,12 @@ get('/') do
 end
 
 get('/results') do
-  @target_word = params.fetch('target_word')
-  @test_word_1 = params.fetch('test_word_1')
+  @target_word = params.fetch('target_word').downcase
+  @test_word_1 = params.fetch('test_word_1').downcase
   @test_word_1_result = @target_word.is_anagram?(@test_word_1)
-  @test_word_2 = params.fetch('test_word_2')
+  @test_word_2 = params.fetch('test_word_2').downcase
   @test_word_2_result = @target_word.is_anagram?(@test_word_2)
-  @test_word_3 = params.fetch('test_word_3')
+  @test_word_3 = params.fetch('test_word_3').downcase
   @test_word_3_result = @target_word.is_anagram?(@test_word_3)
 
   erb(:results)
