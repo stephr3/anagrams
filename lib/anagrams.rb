@@ -5,6 +5,12 @@ class String
     target_word = self.split("")
     test_word = string_2.split("")
 
-    (target_word.length()).==(test_word.length())
+    if (target_word.length()).==(test_word.length())
+      sorted_target_word = target_word.sort()
+      sorted_test_word = test_word.sort()
+      sorted_target_word.join().==sorted_test_word.join()
+    else
+      false
+    end
   end
 end
